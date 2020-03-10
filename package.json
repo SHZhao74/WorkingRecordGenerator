@@ -1,0 +1,19 @@
+{
+  "name": "BiWeeklyReportGenerator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "zsh",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "html-docx-js": "^0.3.1",
+    "html-pdf": "^2.2.0",
+    "moment": "^2.24.0",
+    "pug": "^2.0.4"
+  },
+  "scripts": {
+    "start": "yarn clean && node --no-warnings index.mjs",
+    "clean": "rm -rf pdfs/*"
+  },
+  "type": "module"
+}

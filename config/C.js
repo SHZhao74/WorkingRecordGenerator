@@ -1,8 +1,9 @@
-module.exports = [
+export default [
   {
-    record: "協助露出花蓮縣府觀光活動訊息。",
-    img: "A3_01.png",
-    weight: 1.5
+    record: "協助花蓮縣府設計觀光活動並協助露出花蓮縣府觀光活動訊息。",
+    month: [10, 11, 12],
+    img: ["A3-01-01.png", "A3-01-02.png", "A3-01-03.png"],
+    weight: 1
   },
   {
     record: "協助統計產出公車每月搭乘人數表。",
@@ -22,6 +23,11 @@ module.exports = [
     weight: 1.5
   },
   {
+    record: "依據中華電信之電信數據資料，分析在活動場域各時段平均人潮趨勢。",
+    img: "C_10.png",
+    weight: 1.5
+  },
+  {
     record:
       "針對東大門夜市主要活動時段(18:00~21:00)及散場時段(22:00)，進行旅客進出分析：旅客進場及散場主要以北方及西方、西南方為主。",
     weight: 1.5
@@ -31,7 +37,9 @@ module.exports = [
     weight: 1
   },
   {
-    record: "協助鼎漢彙整、收集、介接中華電信之電信大數據資料。",
+    type: "ul",
+    record: "協助鼎漢彙整、收集、介接中華電信之電信大數據資料，內容包含：",
+    item: ["場域範圍", "活動時間", "資料標的 (年齡、性別、移動路徑)"],
     weight: 1
   },
   {
@@ -45,9 +53,9 @@ module.exports = [
     weight: 1
   },
   {
-    record: "協助清除張貼QR Code與智慧站牌上的遮擋異物。",
+    record: "巡查設備狀態，協助清除張貼QR Code與智慧站牌上的遮擋異物。",
     img: "C2_02.png",
-    weight: 0.6
+    weight: 0.8
   },
   {
     record: "協助測試 QRCODE資訊正確性與掃描成功率。",

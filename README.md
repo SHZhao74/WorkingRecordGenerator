@@ -13,4 +13,23 @@
 2. Text with image
 3. Unordered list
 
+## Installation
+```
+$ yarn install
+$ yarn start
+```
 
+## Example
+### Unordered list
+```
+[
+    ...,
+    {
+        type: 'ul',
+        record: 'title',
+        item: [
+            'item1', 'item2',...
+        ]
+    }
+]
+```

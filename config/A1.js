@@ -1,4 +1,4 @@
-module.exports= [
+export default [
   {
     record:
       "開發「接駁巴士動態資訊」、「停車場基本資料與剩餘車位數」、「接駁巴士行經路段行車速率」等三項Open API。",
@@ -23,7 +23,7 @@ module.exports= [
   {
     record:
       "接駁巴士動態資訊：從公路總局公路汽車客運動態資訊系統及交通部PTX平台取得本案接駁車路線車輛即時位置、營運狀態等資訊，提供其他單位接接使用。",
-    weight: 2
+    weight: 1.2
   },
   {
     record:
@@ -38,8 +38,9 @@ module.exports= [
     weight: 1.2
   },
   {
-    record: "配合花蓮縣府單位修改活動宣傳圖。",
-    weight: 1.3
+    record: "配合花蓮縣府單位修改活動宣傳圖與接駁巴士沿線各站牌專屬QR CODE貼紙，並須輸出備份貼紙2份，共計3份。",
+    img: 'A1_10.png',
+    weight: 1.2
   },
   {
     record: "與花蓮縣府單位、數分討論Wifi連線人數與KPI計算方式修正。",

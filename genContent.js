@@ -63,13 +63,13 @@ export default class GenContent {
       
       if (Array.isArray(record.img)) {
         const j = record.month.findIndex(m => m === time.month() + 1);
-        console.log(record.month, time.month() + 1, j);
+        // console.log(record.month, time.month() + 1, j);
         if(j!== -1){
         result.push({
           record: record.record,
           img: record.img[j]
         });
-          console.log(record.img[j], j);
+          // console.log(record.img[j], j);
         record.img.splice(j, 1);
         record.month.splice(j, 1);
         if (record.img.length === 0) records.splice(index, 1);

@@ -1,0 +1,126 @@
+mixin Page({topic, time,content})
+  .page
+    .same.head
+      span(style="width: 3.5em") 主　題
+      span(style="width:18.6em")=topic
+      span(style="width: 3.8em") 日　期
+      span(style="width: 8.1em")
+        div=time[0]
+        br
+        div='~'+time[1]
+
+    .content
+      - var index=1
+      for c in content
+        case c.type
+          when 'ul'
+            p=index+'. '+c.record
+              for i in c.item
+                li=i
+          default
+            p=index+'. '+c.record
+            if(c.img)
+              img(src=c.img)
+        //- if(/^file:/.test(c))
+          img(src=c)
+        - index+=1
+    .same.foot
+      span(style="width: 5.8em") 見證人
+      span(style="")='\t\t\t\t\t\t\t'
+      span(style="width: 5.8em") 撰寫人
+      span(style="")='\t\t\t\t\t'
+    .small 註：見證人請找上一層主管簽名見證，見證人及撰寫人需簽名並註明日期。
+  .pb_after
+
+html
+  head
+    meta(charset="utf-8")
+    title HTML-DOCX test
+
+    style(type='text/css').
+      *{
+        box-sizing: border-box;
+      }
+      img{
+        width: 100%;
+        //- max-width: 13cm;
+        max-height: 5cm;
+      }
+      body{
+        //- margin: 2.1cm 2.25cm;
+        //- width: 16.49cm;
+        //- height: 25.5cm;
+        font-family: "TimesNewRoman", "Times New Roman" ,Times,'標楷體',"BiauKai";
+      }
+      li {
+        margin: 4px auto;
+      }
+      div, span{
+        display: inline-block;
+        margin: 0;
+      }
+      .content{
+        font-size: 15px;
+        height: 14.97cm;
+        max-height: 19.77cm;
+        width: 100%;
+        padding-left: 1em;
+        padding-right: 1em;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-top:1px solid black;
+        border-bottom:1px solid black;
+        overflow-y: hidden;
+        overflow-x: visible;
+
+      }
+      .same{
+        font-size: 14px;
+        width: 100%;
+        border: none;
+        display: flex;
+        //- height: 2em;
+        white-space: nowrap;
+      }
+      .head{
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-top:2px solid black;
+      }
+      .foot{
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-bottom:2px solid black;
+      }
+
+      .same>*:nth-child(odd) {
+        text-align: center;
+        width: 4em;
+        padding: 0em .5em;
+      }
+      .same>*:nth-child(even) {
+        white-space: pre-wrap;
+        padding-left: 1px;
+      }
+      .same>* {
+        font-weight: bolder;
+        display: table-cell;
+        vertical-align : middle;
+        border-right: none;
+        height: 1cm;
+        //- margin: auto;
+        //- padding: 1em;
+      }
+      .same>*:not(:last-child){
+        border-right: 1px solid black;
+      }
+      .small{
+        font-size: 12px;
+        display: block;
+        border: none;
+        margin-top: .2em;
+      }
+      .pb_after  { page-break-before: always !important; } /* Breaks page after of element */
+  body
+    for d in datas
+      +Page(d)

@@ -11,7 +11,7 @@
     "html-pdf": "^2.2.0",
     "image-size": "^0.8.3",
     "mime-types": "^2.1.27",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "pug": "^2.0.4",
     "resize-img": "^2.0.0"
   },
